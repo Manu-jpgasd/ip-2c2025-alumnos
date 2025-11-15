@@ -33,15 +33,16 @@ def step():
     if fase == "swap":
        if min_idx != i:
           items[i], items[min_idx] = items[min_idx], items[i]
-          resultado = {"a": min_idx, "b": j, "swap": True, "done": False}
+          resultado = {"a": min_idx, "b": i, "swap": True, "done": False}
        else:
-          resultado = {"a": min_idx, "b": j, "swap": False, "done": False}
+          resultado = {"a": min_idx, "b": i, "swap": False, "done": False}
        i += 1
        j = i + 1
        min_idx = i
        fase = "buscar"
 
        return resultado
+    return {"done": True}
        
     # TODO:
     # - Fase "buscar": comparar j con min_idx, actualizar min_idx, avanzar j.
@@ -51,4 +52,4 @@ def step():
     #   Luego avanzar i, reiniciar j=i+1 y min_idx=i, volver a "buscar".
     #
     # Cuando i llegue al final, devolvé {"done": True}.
-    return {"done": True}
+
