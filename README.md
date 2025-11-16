@@ -167,3 +167,22 @@ El informe debe estar en **PDF** dentro de la carpeta del TP.
 ## Requisitos y entorno
 - Python 3.10+  
 - Navegador moderno (Chrome, Firefox o Edge)
+
+## Readme del equipo
+- integrantes: Manuel Abogado, Agustin Berligheri
+- Algoritmos implementados:
+- El proyecto Incluye los tres algoritmos obligatorios, cada uno sigulendo el contrato Init(vals) step():
+ Bubble Sort algorithms/sort_bubble.py
+ Selection Sort algorithms/sort_selection.py
+ Insertion Sort algorithms/sort_insertion.py
+- Ademas incluimos:
+ Shell Sort algorithms/sort_shell.py
+ Sort Quick algorithms/sort_quick.py
+- Decisiones de implementación
+ - Respetamos el contrato previsto por la catedra, utilizando variables globales para mantener el estado entre llanadas
+ - Organizamos cada archivo inicializando con init() y ejecucion paso a paso con step()
+- Nos aseguramos de que:
+ - El swap se realice antes de devolver "swap": True
+ - Todos los indices a y besten dentro del rango permitido.
+ - Los punteros del algoritmo se actualicen correctamente para continuar el proceso.
+ - Para facilitar pruebas, usamos el visualizador local -Provisto con python - http.server.
